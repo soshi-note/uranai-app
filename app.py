@@ -346,7 +346,10 @@ def setup_fonts():
     global _fonts_ready
     if _fonts_ready:
         return True
+    base = os.path.dirname(os.path.abspath(__file__))
     candidates = [
+        (os.path.join(base, "fonts", "NotoSansJP-Regular.ttf"),
+         os.path.join(base, "fonts", "NotoSansJP-Bold.ttf")),
         (r"C:\Windows\Fonts\meiryo.ttc",  r"C:\Windows\Fonts\meiryob.ttc"),
         (r"C:\Windows\Fonts\YuGothM.ttc", r"C:\Windows\Fonts\YuGothB.ttc"),
         (r"C:\Windows\Fonts\msgothic.ttc", r"C:\Windows\Fonts\msgothic.ttc"),
