@@ -378,6 +378,167 @@ MATURITY_BRIEF = {
     33: "人生後半のテーマは「無条件の愛の完成」。あらゆる経験が深い慈悲へと昇華し、その存在が世界の光となります。",
 }
 
+# ===== 相性スコアデータ =====
+# key: (min(lp1,lp2), max(lp1,lp2))  マスターナンバーは基数に縮約して参照
+# value: (恋愛, 友人, 仕事, コメント)
+COMPAT_DATA = {
+    (1,1): (62,63,72,"同じリーダー同士。刺激的だが主導権争いが起きやすい。互いの意見を尊重できれば最強のコンビに。"),
+    (1,2): (80,82,74,"1の行動力と2の共感力が絶妙に噛み合う。2が1を支え1が2に自信を与え合う理想的な補完関係。"),
+    (1,3): (86,88,78,"お互いのエネルギーが高め合う黄金コンビ。笑いと創造に満ちた関係が自然と続く。"),
+    (1,4): (55,68,82,"4の慎重さが1の勢いにブレーキをかける。仕事では安定した成果を出せるが恋愛ではテンポが合わないことも。"),
+    (1,5): (82,86,72,"自由を愛する者同士、高め合える関係。ただし自己主張の強さから衝突も多い。"),
+    (1,6): (72,74,68,"6の愛情が1を包み込む温かな関係。1の自由欲求と6の束縛感が衝突しないよう要注意。"),
+    (1,7): (62,76,80,"表面上は違いが多いが、深いところで惹かれ合う。知的探求を共にすると一気に絆が深まる。"),
+    (1,8): (74,68,90,"同じ野心と成功意欲を持つパワーコンビ。ビジネスでは最強だが恋愛では主導権争いに注意。"),
+    (1,9): (76,84,74,"1の個性と9の博愛精神が調和する。互いの違いを尊重し学び合える成長関係。"),
+    (2,2): (82,86,64,"心の繋がりが非常に深い。感情を共有しやすいが両方とも決断が苦手なため注意が必要。"),
+    (2,3): (76,86,68,"2の優しさと3の明るさが心地よい関係を生む。楽しい時間が続くが深い部分で合わないこともある。"),
+    (2,4): (82,80,86,"安定と誠実さを大切にする価値観が一致。長期的な信頼関係を築きやすい黄金コンビ。"),
+    (2,5): (58,72,64,"2の安定欲求と5の自由欲求が衝突しやすい。互いの違いを受け入れる寛容さが鍵。"),
+    (2,6): (92,88,80,"愛と調和を大切にする価値観が一致する最高の組み合わせ。深い愛情で長続きする関係に。"),
+    (2,7): (70,80,76,"2の感情と7の知性が補完し合う。精神的な深い繋がりが築けると長期的に安定する。"),
+    (2,8): (74,70,82,"2のサポートと8のリーダーシップが噛み合う。8が強引にならなければ安定した関係に。"),
+    (2,9): (86,90,80,"深い愛と共感を共有できる理想的な組み合わせ。魂レベルで理解し合える素晴らしい関係。"),
+    (3,3): (80,90,62,"楽しさと笑いが溢れる華やかなコンビ。ただし二人ともシリアスな場面への対応が弱い面も。"),
+    (3,4): (54,64,70,"3の自由奔放さと4の堅実さが対照的。互いから学べることは多いが日常ではズレが生じやすい。"),
+    (3,5): (86,90,74,"自由で楽しいエネルギーが共鳴し合う最高の関係。冒険と発見に溢れた刺激的な毎日に。"),
+    (3,6): (80,86,74,"3の明るさと6の温かさが心地よい関係を生む。家庭的な幸せも一緒に追求できる良いコンビ。"),
+    (3,7): (66,76,70,"表面上は違いが多いが内面の豊かさで惹かれ合う。深い会話ができると一気に距離が縮まる。"),
+    (3,8): (64,70,76,"3の創造性と8の実行力が合わさると大きな成果に。価値観の違いから衝突も生まれやすい。"),
+    (3,9): (90,90,80,"創造性と博愛が融合した理想的な組み合わせ。お互いを最大限に高め合える黄金コンビ。"),
+    (4,4): (74,70,92,"安定と信頼の塊。変化は少ないが非常に堅固な関係。特にビジネスパートナーとして最強。"),
+    (4,5): (48,58,62,"4の安定志向と5の変化志向が真逆。互いの世界を理解し合うのに時間と忍耐が必要。"),
+    (4,6): (86,86,84,"安定・誠実・家庭を大切にする価値観が一致。長期的に信頼し合える理想のパートナー関係。"),
+    (4,7): (70,80,82,"4の現実感覚と7の深い思考が組み合わさると最高の成果に。精神的な絆が深まれば長続きする。"),
+    (4,8): (78,74,92,"努力と成功を大切にする価値観が一致。ビジネスでは最強の組み合わせ。恋愛でも安定した関係に。"),
+    (4,9): (60,70,68,"4の具体性と9の抽象性がぶつかりやすい。価値観の違いを乗り越えると深い絆が生まれる。"),
+    (5,5): (76,86,64,"自由と冒険を愛する者同士、楽しい関係に。ただし二人ともルーズになりがちなので要注意。"),
+    (5,6): (64,70,62,"5の自由さと6の家庭志向が衝突しやすい。価値観を尊重できれば補完関係に発展できる。"),
+    (5,7): (82,86,74,"知的好奇心と冒険心が共鳴する素晴らしい組み合わせ。精神的・知的な探求を共にできる。"),
+    (5,8): (70,72,76,"5の変化力と8の実行力が合わさると大きな成果に。価値観の違いが互いへの刺激になる。"),
+    (5,9): (80,84,74,"自由と博愛が融合した広がりのある関係。世界を一緒に探求するような開放的な絆に。"),
+    (6,6): (86,86,74,"愛情深い者同士の温かな関係。家庭的な幸せを共に追求できる理想のコンビ。"),
+    (6,7): (64,76,70,"6の愛情深さと7の知的探求心が補完し合う。価値観の違いを認め合えると深い関係に発展。"),
+    (6,8): (76,74,82,"6のサポートと8の野心が噛み合う。現実的な豊かさと愛情の両方を追求できる良いコンビ。"),
+    (6,9): (92,90,84,"愛と博愛の最高の組み合わせ。お互いを深く理解し合える魂レベルでの繋がりが生まれる。"),
+    (7,7): (70,80,82,"知性と探求を共有する深い関係。二人だけの世界に入り込みすぎる傾向があるので注意。"),
+    (7,8): (64,70,80,"7の洞察力と8のビジネス感覚が合わさると最高の成果に。精神的な価値観の違いには要注意。"),
+    (7,9): (86,86,80,"スピリチュアルな探求と博愛が融合した深い関係。魂レベルでの強い繋がりを感じられる。"),
+    (8,8): (64,64,86,"野心と成功意欲が共鳴する。ビジネスでは最強だが主導権争いが起きやすいので要注意。"),
+    (8,9): (70,76,74,"8の現実力と9の叡智が融合すると大きな影響力に。価値観の違いを超えると強力な関係に。"),
+    (9,9): (82,90,76,"博愛と叡智を共有する魂レベルの関係。世界全体の幸福を願う大きな愛で繋がれる。"),
+}
+
+def get_compat(lp1, lp2):
+    def base(n):
+        if n == 11: return 2
+        if n == 22: return 4
+        if n == 33: return 6
+        return n
+    b1, b2 = base(lp1), base(lp2)
+    key = (min(b1, b2), max(b1, b2))
+    return COMPAT_DATA.get(key, (65, 65, 65, "様々な魅力を持つ独自の組み合わせです。互いの違いを尊重し合うことで豊かな関係が生まれます。"))
+
+def compat_label(score):
+    if score >= 90: return "最高 ★★★★★"
+    if score >= 80: return "大変良好 ★★★★"
+    if score >= 70: return "良好 ★★★"
+    if score >= 60: return "普通 ★★"
+    return "要努力 ★"
+
+# ===== 月別運勢データ（パーソナルマンス数 1〜9）=====
+PERSONAL_MONTH_READINGS = {
+    1: {
+        "theme": "新たなスタート・決断の月",
+        "overall": "新しいサイクルの幕開けを告げる月です。新規プロジェクトを立ち上げる、新しい習慣を始める、長年の夢に向けて一歩踏み出すなど「最初の一手」を打つのに最高のタイミングです。迷っていたことはこの月に決断を。",
+        "love": "積極的なアプローチが吉。好きな人への告白、デートへのお誘いなど自分から動くことで道が開けます。パートナーがいる方は二人の新しい目標や計画を立てる良い機会です。",
+        "work": "新しいアイデアを提案したり、これまで避けていた課題に取り組む絶好のチャンス。上司や重要な人物への自己PRが功を奏しやすい時期です。",
+        "health": "エネルギーが高まり新しい運動や食事習慣を始めるのに最適な月。ジムへの入会や健康診断の予約など先延ばしにしていたことを実行しましょう。",
+        "advice": "「考えてから動く」より「動きながら考える」が正解の月。完璧でなくても踏み出すことが大切です。",
+        "lucky": "ラッキーカラー：赤・白　ラッキーデー：1日・10日・19日",
+    },
+    2: {
+        "theme": "関係性を深める・待つ月",
+        "overall": "人間関係や協力関係を育てる月です。焦らず丁寧に相手の気持ちに寄り添うことで信頼が深まります。重要な決断は来月に持ち越し、今月は準備と関係構築に集中しましょう。",
+        "love": "相手への思いやりと共感が鍵。デートよりも日常の小さな気遣いが心を動かします。片思いの方は焦らずじっくりと関係を育てることで自然な発展が生まれやすい時期です。",
+        "work": "チームワークが重要な月。一人で進めるより同僚や上司と連携することで成果が出やすい時期です。調整役・橋渡し役として活躍できるチャンスがあります。",
+        "health": "感受性が高まりストレスを感じやすい時期。十分な睡眠と水分補給を心がけ、好きな音楽や入浴など「癒し習慣」を積極的に取り入れましょう。",
+        "advice": "感情の波に乗られず、まず深呼吸。「聴く力」を意識するだけで周囲との関係が劇的に改善します。",
+        "lucky": "ラッキーカラー：オレンジ・ピンク　ラッキーデー：2日・11日・20日",
+    },
+    3: {
+        "theme": "表現・創造・喜びの月",
+        "overall": "才能と個性が輝く明るい月です。自分の気持ちや考えを積極的に表現することで周囲に良い影響を与えられます。SNSでの発信、趣味の創作、人前でのプレゼンなど「伝える」行動が吉です。",
+        "love": "楽しさと笑いを大切にする時期。重い話より軽やかなコミュニケーションで距離が縮まります。デートは映画・音楽・アートなど感性を刺激する場所が◎",
+        "work": "クリエイティブな仕事が特に輝く月。アイデアが豊富に湧いてくるので企画・デザイン・ライティングなど創造性を活かせる場面で力を発揮できます。",
+        "health": "明るい気持ちで過ごすことが最大の健康法。笑いとレクリエーションを意識的に取り入れて。過食・過飲には気をつけましょう。",
+        "advice": "「どう思われるか」より「どう感じるか」を大切にして。あなたらしさこそが最大の魅力です。",
+        "lucky": "ラッキーカラー：黄色・ライトブルー　ラッキーデー：3日・12日・21日",
+    },
+    4: {
+        "theme": "土台作り・コツコツの月",
+        "overall": "地道な努力が実を結ぶ基盤構築の月です。派手な成果より着実な積み上げが後の大きな成功に繋がります。計画を立て、日々のルーティンを整え、一つ一つ丁寧にこなすことが吉です。",
+        "love": "誠実さと継続が大切な月。特別なサプライズより毎日の小さな約束を守ることが相手の信頼を得ます。長期的な関係について話し合うのも良い時期です。",
+        "work": "書類整理、データ管理、システム化など縁の下の力持ち的な仕事が大きな価値を生む時期。今月しっかり基盤を整えておくと来月以降に大きな成果が生まれます。",
+        "health": "規則正しい生活リズムを整えることが健康の鍵。睡眠時間の確保、食事の時間を一定にする、適度な運動の習慣化など基本的な生活習慣の改善が最大の薬になります。",
+        "advice": "「完璧でなければやらない」という思考は手放して。80点で動き出すことが今月の成功の秘訣です。",
+        "lucky": "ラッキーカラー：グリーン・ネイビー　ラッキーデー：4日・13日・22日",
+    },
+    5: {
+        "theme": "変化・自由・チャレンジの月",
+        "overall": "変化と刺激に満ちた月です。思いがけないチャンスや出会いが訪れる可能性大。「いつもと違うことをする」がキーワード。旅行、新しい趣味、人脈の拡大など変化を積極的に楽しみましょう。",
+        "love": "新鮮さと刺激が関係を活性化する時期。マンネリを感じていたカップルは新しい体験を共にすることで関係がリフレッシュ。出会いを求めている方は積極的に行動範囲を広げて。",
+        "work": "変化を恐れずチャレンジする時期。新しいプロジェクト、部署異動、転職など大きな変化のチャンスが来たら迷わず飛び込んで。柔軟な対応力が最大の武器になります。",
+        "health": "アクティブに動くことでエネルギーが循環する月。スポーツ観戦より実際に体を動かすことが吉。ただし無茶な運動や不規則な生活には注意が必要です。",
+        "advice": "変化は怖くない。あなたに必要なのは「変化を楽しむ勇気」です。小さな変化から始めてみましょう。",
+        "lucky": "ラッキーカラー：ターコイズ・シルバー　ラッキーデー：5日・14日・23日",
+    },
+    6: {
+        "theme": "愛・家族・奉仕の月",
+        "overall": "家族、友人、パートナーなど大切な人との関係に焦点が当たる月です。誰かのために尽くすことで自分にも大きな喜びが返ってきます。また美しい空間や環境を整えることも運気アップに繋がります。",
+        "love": "愛情表現が特に大切な月。言葉と行動の両方で「あなたが大切」と伝えましょう。家でのロマンチックな時間、手料理、感謝の言葉など日常の中の愛情確認が関係を深めます。",
+        "work": "チームの調和や後輩・部下のサポートに力を入れることで評価が上がる時期。自分の成果より「チーム全体の成功」を意識することがポイントです。",
+        "health": "心の健康が身体の健康に直結する月。大切な人との温かい時間を過ごすことが最高の癒し。家族や友人との食事、ゆっくりとした入浴など「愛のある日常」を大切に。",
+        "advice": "自分も愛される価値があることを忘れずに。奉仕と受け取りのバランスが今月の運気を整える鍵です。",
+        "lucky": "ラッキーカラー：ローズ・ラベンダー　ラッキーデー：6日・15日・24日",
+    },
+    7: {
+        "theme": "内省・学び・スピリチュアルの月",
+        "overall": "内面を深く見つめ知識と精神性を高める月です。一人になる時間を大切にし、読書、学習、瞑想、自然との触れ合いなど「魂を養う」活動が運気を高めます。焦らず静かに過ごすことが吉。",
+        "love": "深い対話と内面の共有が大切な時期。表面的なデートより、お互いの価値観や夢について話し合う機会を設けましょう。一人の時間も大切にしながら質の高い関係を育てて。",
+        "work": "研究・分析・専門知識の習得に最も適した月。資格勉強、データ分析、専門書の読み込みなど知識を深める活動が後の大きな成果に繋がります。",
+        "health": "精神的な安定が鍵の月。瞑想、ヨガ、自然散歩など心を落ち着ける活動を積極的に取り入れて。デジタルデトックスも効果的です。",
+        "advice": "答えは外ではなく内にあります。静寂の中に座り、自分の心の声に耳を傾けてみましょう。",
+        "lucky": "ラッキーカラー：パープル・ネイビー　ラッキーデー：7日・16日・25日",
+    },
+    8: {
+        "theme": "成功・豊かさ・実現の月",
+        "overall": "財運と成功運が高まる強力な月です。ビジネスの交渉、昇進や昇給の申請、投資の決断、重要なプレゼンなど「勝負」の場面には積極的に臨みましょう。努力してきたことが形になりやすい時期です。",
+        "love": "関係を一歩進める重要な決断をするのに良い時期。同棲、婚約、結婚など次のステージへの動きが吉。相手に感謝と敬意を忘れず対等なパートナーシップを意識しましょう。",
+        "work": "キャリアにおける大きなチャンスが訪れる月。昇進・昇給の交渉、重要プロジェクトへの参加、独立・起業の決断など大きな一手を打つのに最適なタイミングです。",
+        "health": "体のメンテナンスに投資する月。高品質なサプリメント、専門家のカウンセリング、スポーツジムへの再加入など健康への先行投資が後に大きなリターンをもたらします。",
+        "advice": "自分の価値を過小評価しないで。あなたが思う以上の力がこの月に発揮できます。",
+        "lucky": "ラッキーカラー：ゴールド・ダークレッド　ラッキーデー：8日・17日・26日",
+    },
+    9: {
+        "theme": "完成・手放し・感謝の月",
+        "overall": "一つのサイクルの終わりと完成を告げる月です。不要なものを手放し感謝で過去を締めくくることで次のサイクルへの準備が整います。断捨離、人間関係の整理、古い習慣の見直しが吉。",
+        "love": "過去の傷や執着を手放す大切な時期。うまくいかなかった関係を引きずっている方は感謝して手放すことで新しい愛の扉が開きます。パートナーとの関係では深い感謝と許しが絆を強めます。",
+        "work": "プロジェクトの締めくくりや引継ぎを丁寧に行う月。仕事の仕上げを完璧に行うことで次のステージへの扉が開きます。奉仕の精神で取り組むことが評価を高めます。",
+        "health": "デトックスと浄化の月。食事の見直し、身体の毒素排出など「排出」が健康のキーワードです。感謝日記や許しの瞑想もおすすめ。",
+        "advice": "手放すことへの恐怖を手放して。手放した分だけより良いものが入ってくるのが宇宙の法則です。",
+        "lucky": "ラッキーカラー：ゴールド・ホワイト　ラッキーデー：9日・18日・27日",
+    },
+}
+
+def get_monthly_forecast(personal_year):
+    months = []
+    for m in range(1, 13):
+        pm = reduce_num(personal_year + m)
+        reading = PERSONAL_MONTH_READINGS.get(pm, PERSONAL_MONTH_READINGS[1])
+        months.append({"month": m, "personal_month": pm, **reading})
+    return months
+
 # ===== フォント =====
 _fonts_ready = False
 def setup_fonts():
@@ -705,78 +866,399 @@ def gen_full(name, year, month, day, furigana):
     buf.seek(0)
     return buf.getvalue(), lp, r, nums
 
-# ===== Streamlit UI =====
+# ===== 相性鑑定PDF =====
+def gen_compat_pdf(name_a, year_a, month_a, day_a,
+                   name_b, year_b, month_b, day_b):
+    lp_a = life_path(year_a, month_a, day_a)
+    lp_b = life_path(year_b, month_b, day_b)
+    love, friend, work, comment = get_compat(lp_a, lp_b)
+    overall = (love + friend + work) // 3
+    r_a = READINGS.get(lp_a, READINGS[9])
+    r_b = READINGS.get(lp_b, READINGS[9])
+
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf, pagesize=A4)
+    W, H = A4
+    margin, cw = 12*mm, W - 24*mm
+
+    # ── ページ1: カバー ──────────────────────────────────
+    draw_bg(c, W, H)
+    c.setFillColor(colors.Color(1, 0.537, 0.024, alpha=0.06))
+    c.circle(W/2, H/2, 200, fill=1, stroke=0)
+    c.setFillColor(ACCENT)
+    c.setFont("JFontBold", 18)
+    c.drawCentredString(W/2, H - 42*mm, "数秘術  相性鑑定書")
+    c.setFillColor(GRAY)
+    c.setFont("JFont", 9)
+    c.drawCentredString(W/2, H - 51*mm,
+        f"{year_a}/{month_a}/{day_a}  ×  {year_b}/{month_b}/{day_b}")
+    c.setStrokeColor(ACCENT)
+    c.setLineWidth(0.5)
+    c.line(40*mm, H - 55*mm, W - 40*mm, H - 55*mm)
+
+    for x_off, name, lp in [(-45*mm, name_a, lp_a), (45*mm, name_b, lp_b)]:
+        c.setFillColor(WHITE)
+        c.setFont("JFont", 12)
+        c.drawCentredString(W/2 + x_off, H - 67*mm, name + " 様")
+        c.setFillColor(ACCENT)
+        c.setFont("JFontBold", 32)
+        c.drawCentredString(W/2 + x_off, H - 82*mm, str(lp))
+        c.setFillColor(GRAY)
+        c.setFont("JFont", 8)
+        c.drawCentredString(W/2 + x_off, H - 89*mm, "ライフパス")
+    c.setFillColor(WHITE)
+    c.setFont("JFontBold", 18)
+    c.drawCentredString(W/2, H - 80*mm, "×")
+
+    c.setFillColor(ACCENT)
+    c.setFont("JFontBold", 68)
+    c.drawCentredString(W/2, H/2 + 10*mm, f"{overall}%")
+    c.setFillColor(WHITE)
+    c.setFont("JFontBold", 14)
+    c.drawCentredString(W/2, H/2 - 12*mm, "総合相性スコア")
+    c.setFillColor(GRAY)
+    c.setFont("JFont", 11)
+    c.drawCentredString(W/2, H/2 - 21*mm, compat_label(overall))
+
+    bar_x = margin + 22*mm
+    bar_w = W - margin*2 - 44*mm
+    bar_h = 4.5*mm
+    for i, (label, score, col) in enumerate([
+        ("恋愛相性", love,   SEC_COLORS[0]),
+        ("友人相性", friend, SEC_COLORS[1]),
+        ("仕事相性", work,   SEC_COLORS[2]),
+    ]):
+        by = H/2 - 40*mm - i * 17*mm
+        c.setFillColor(col)
+        c.setFont("JFontBold", 10)
+        c.drawString(margin + 3*mm, by, label)
+        c.drawRightString(W - margin - 3*mm, by, f"{score}%  {compat_label(score)}")
+        c.setFillColor(colors.Color(0.25, 0.25, 0.30))
+        c.roundRect(bar_x, by - 7*mm, bar_w, bar_h, 1*mm, fill=1, stroke=0)
+        c.setFillColor(col)
+        c.roundRect(bar_x, by - 7*mm, bar_w * score / 100, bar_h, 1*mm, fill=1, stroke=0)
+
+    draw_footer(c, W, margin)
+    c.showPage()
+
+    # ── ページ2: 詳細分析 ────────────────────────────────
+    draw_bg(c, W, H)
+    draw_header(c, W, H, f"相性詳細分析  ／  {name_a} × {name_b}")
+    y = H - 32*mm
+    y = draw_section(c, "相性コメント", comment, margin, y, cw, SEC_COLORS[0])
+    y = check_page(c, y, W, H, f"相性詳細分析  ／  {name_a} × {name_b}")
+    y = draw_section(c, f"{name_a} さん（ナンバー {lp_a}）の特徴",
+                     r_a["personality"], margin, y, cw, SEC_COLORS[1])
+    y = check_page(c, y, W, H, f"相性詳細分析  ／  {name_a} × {name_b}")
+    y = draw_section(c, f"{name_b} さん（ナンバー {lp_b}）の特徴",
+                     r_b["personality"], margin, y, cw, SEC_COLORS[2])
+    y = check_page(c, y, W, H, f"相性詳細分析  ／  {name_a} × {name_b}")
+    advice = (f"ライフパス {lp_a} の {name_a} さんは「{r_a['keyword']}」、"
+              f"ナンバー {lp_b} の {name_b} さんは「{r_b['keyword']}」を大切にしています。"
+              f"互いの価値観を尊重し、違いを強みとして活かすことで、この関係はさらに豊かになります。"
+              f"二人が共に成長し合える関係を目指してください。")
+    y = draw_section(c, "二人へのアドバイス", advice, margin, y, cw, SEC_COLORS[3])
+    draw_footer(c, W, margin)
+    c.save()
+    buf.seek(0)
+    return buf.getvalue(), lp_a, lp_b, overall
+
+# ===== 月別運勢PDF =====
+def gen_monthly_pdf(name, year, month, day):
+    py  = personal_year_num(month, day)
+    fc  = get_monthly_forecast(py)
+    lp  = life_path(year, month, day)
+    MONTH_JA = ["1月","2月","3月","4月","5月","6月",
+                 "7月","8月","9月","10月","11月","12月"]
+
+    buf = io.BytesIO()
+    c   = canvas.Canvas(buf, pagesize=A4)
+    W, H = A4
+    margin, cw = 12*mm, W - 24*mm
+
+    # ── ページ1: カバー（12ヶ月グリッド）────────────────
+    draw_bg(c, W, H)
+    c.setFillColor(colors.Color(1, 0.537, 0.024, alpha=0.06))
+    c.circle(W/2, H/2, 190, fill=1, stroke=0)
+    c.setFillColor(ACCENT)
+    c.setFont("JFontBold", 18)
+    c.drawCentredString(W/2, H - 38*mm, "2026年  月別運勢鑑定書")
+    c.setFillColor(WHITE)
+    c.setFont("JFont", 13)
+    c.drawCentredString(W/2, H - 49*mm, f"〜  {name}  様  〜")
+    c.setFillColor(GRAY)
+    c.setFont("JFont", 9)
+    c.drawCentredString(W/2, H - 57*mm,
+        f"パーソナルイヤー：{py}  ／  ライフパス：{lp}")
+    c.setStrokeColor(ACCENT)
+    c.setLineWidth(0.4)
+    c.line(40*mm, H - 61*mm, W - 40*mm, H - 61*mm)
+
+    grid_top = H - 68*mm
+    cell_w   = (W - margin*2) / 3
+    cell_h   = 28*mm
+    for idx, mf in enumerate(fc):
+        col_i = idx % 3
+        row_i = idx // 3
+        cx    = margin + col_i * cell_w
+        cy    = grid_top - row_i * cell_h
+        col   = SEC_COLORS[mf["personal_month"] % len(SEC_COLORS)]
+        c.setFillColor(colors.Color(col.red, col.green, col.blue, alpha=0.20))
+        c.roundRect(cx+1*mm, cy-cell_h+2*mm, cell_w-2*mm, cell_h-3*mm, 1.5*mm, fill=1, stroke=0)
+        c.setFillColor(col)
+        c.setFont("JFontBold", 10)
+        c.drawString(cx+3*mm, cy-6*mm, f"{MONTH_JA[idx]}  PM：{mf['personal_month']}")
+        c.setFillColor(WHITE)
+        c.setFont("JFont", 8)
+        theme = mf.get("theme","")
+        c.drawString(cx+3*mm, cy-12*mm, theme[:18])
+        if len(theme) > 18:
+            c.drawString(cx+3*mm, cy-17*mm, theme[18:36])
+
+    draw_footer(c, W, margin)
+    c.showPage()
+
+    # ── ページ2〜3: 月別詳細（6ヶ月ずつ）───────────────
+    for half in range(2):
+        draw_bg(c, W, H)
+        draw_header(c, W, H, f"2026年 月別詳細運勢  ／  {name} 様")
+        y = H - 32*mm
+        for mf in fc[half*6:(half+1)*6]:
+            col = SEC_COLORS[mf["personal_month"] % len(SEC_COLORS)]
+            hdr = (f"{MONTH_JA[mf['month']-1]}  （個人月：{mf['personal_month']}）"
+                   f"  ◇ {mf.get('theme','')}")
+            c.setFillColor(colors.Color(col.red, col.green, col.blue, alpha=0.22))
+            c.rect(margin, y-7*mm, cw, 7*mm, fill=1, stroke=0)
+            c.setFillColor(col)
+            c.setFont("JFontBold", 10)
+            c.drawString(margin+2*mm, y-5*mm, hdr)
+            y -= 11*mm
+            c.setFillColor(WHITE)
+            for field, lbl in [("overall","全体運"),("love","恋愛運"),("work","仕事運"),("health","健康運")]:
+                text = f"【{lbl}】 {mf.get(field,'')}"
+                y = draw_wrapped(c, text, margin+3*mm, y, cw-6*mm, "JFont", 9, line_gap=3)
+                y -= 2*mm
+            c.setFillColor(ACCENT)
+            c.setFont("JFont", 8)
+            c.drawString(margin+3*mm, y, f"▶ アドバイス：{mf.get('advice','')}")
+            y -= 6*mm
+            c.setFillColor(GRAY)
+            c.setFont("JFont", 8)
+            c.drawString(margin+3*mm, y, mf.get("lucky",""))
+            y -= 10*mm
+            y = check_page(c, y, W, H, f"2026年 月別詳細運勢  ／  {name} 様")
+        draw_footer(c, W, margin)
+        c.showPage()
+
+    c.save()
+    buf.seek(0)
+    return buf.getvalue(), py
+
+# ===== Streamlit UI（3タブ構成） =====
 st.set_page_config(page_title="数秘術 鑑定PDF", page_icon="✨", layout="centered")
 
-st.title("✨ 数秘術 ライフパスナンバー鑑定")
+st.title("✨ 数秘術 鑑定")
 st.caption("生年月日・お名前からあなたの数字を診断し、鑑定書PDFをお渡しします。")
 st.divider()
 
-mode = st.radio("鑑定タイプを選んでください", ["簡易版（2ページ）", "本格版（4ページ）"], horizontal=True)
+tab1, tab2, tab3 = st.tabs(["個人鑑定", "相性診断", "2026年 月別運勢"])
 
-with st.form("uranai_form"):
-    name = st.text_input("お名前（表示用）", placeholder="例：山田 花子")
-    if "本格版" in mode:
-        furigana = st.text_input(
-            "フリガナ（ひらがな・カタカナ）",
-            placeholder="例：やまだはなこ",
-            help="フリガナからディスティニー数・ソウル数・パーソナリティ数を計算します"
-        )
-    else:
-        furigana = ""
+# ─── タブ1: 個人鑑定 ───────────────────────────────────────
+with tab1:
+    mode = st.radio("鑑定タイプを選んでください", ["簡易版（2ページ）", "本格版（4ページ）"], horizontal=True)
 
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        year  = st.number_input("生まれた年", min_value=1920, max_value=2010, value=1990, step=1)
-    with col2:
-        month = st.number_input("月", min_value=1, max_value=12, value=1, step=1)
-    with col3:
-        day   = st.number_input("日", min_value=1, max_value=31, value=1, step=1)
+    with st.form("uranai_form"):
+        name = st.text_input("お名前（表示用）", placeholder="例：山田 花子")
+        if "本格版" in mode:
+            furigana = st.text_input(
+                "フリガナ（ひらがな・カタカナ）",
+                placeholder="例：やまだはなこ",
+                help="フリガナからディスティニー数・ソウル数・パーソナリティ数を計算します"
+            )
+        else:
+            furigana = ""
 
-    submitted = st.form_submit_button("🔮 鑑定する", use_container_width=True)
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            year  = st.number_input("生まれた年", min_value=1920, max_value=2010, value=1990, step=1)
+        with col2:
+            month = st.number_input("月", min_value=1, max_value=12, value=1, step=1)
+        with col3:
+            day   = st.number_input("日", min_value=1, max_value=31, value=1, step=1)
 
-if submitted:
-    if not name.strip():
-        st.error("お名前を入力してください。")
-    elif "本格版" in mode and not furigana.strip():
-        st.error("本格版はフリガナも入力してください。")
-    elif not setup_fonts():
-        st.error("フォントの読み込みに失敗しました。")
-    else:
-        with st.spinner("鑑定中..."):
-            if "簡易版" in mode:
-                pdf_bytes, lp, r = gen_simple(name.strip(), int(year), int(month), int(day))
-                st.success("鑑定完了！")
-                st.markdown(f"### ライフパスナンバー：**{lp}**")
-                st.markdown(f"**{r['title']}**　｜　キーワード：{r['keyword']}")
-                label = "簡易版"
-            else:
-                pdf_bytes, lp, r, nums = gen_full(
-                    name.strip(), int(year), int(month), int(day), furigana.strip())
-                st.success("鑑定完了！")
+        submitted = st.form_submit_button("🔮 鑑定する", use_container_width=True)
 
-                col_a, col_b = st.columns(2)
-                with col_a:
-                    st.markdown(f"**ライフパスナンバー：{lp}**")
-                    st.caption(r['title'])
-                    if nums.get('dn'):
-                        st.markdown(f"ディスティニーナンバー：**{nums['dn']}**")
-                    if nums.get('sn'):
-                        st.markdown(f"ソウルナンバー：**{nums['sn']}**")
-                    if nums.get('pn'):
-                        st.markdown(f"パーソナリティーナンバー：**{nums['pn']}**")
-                with col_b:
-                    st.markdown(f"バースデーナンバー：**{nums['bn']}**")
-                    st.markdown(f"パーソナルイヤー2026：**{nums['py']}**")
-                    if nums.get('mn'):
-                        st.markdown(f"マチュリティーナンバー：**{nums['mn']}**")
-                label = "本格版"
+    if submitted:
+        if not name.strip():
+            st.error("お名前を入力してください。")
+        elif "本格版" in mode and not furigana.strip():
+            st.error("本格版はフリガナも入力してください。")
+        elif not setup_fonts():
+            st.error("フォントの読み込みに失敗しました。")
+        else:
+            with st.spinner("鑑定中..."):
+                if "簡易版" in mode:
+                    pdf_bytes, lp, r = gen_simple(name.strip(), int(year), int(month), int(day))
+                    st.success("鑑定完了！")
+                    st.markdown(f"### ライフパスナンバー：**{lp}**")
+                    st.markdown(f"**{r['title']}**　｜　キーワード：{r['keyword']}")
+                    label = "簡易版"
+                else:
+                    pdf_bytes, lp, r, nums = gen_full(
+                        name.strip(), int(year), int(month), int(day), furigana.strip())
+                    st.success("鑑定完了！")
 
-        st.divider()
-        st.download_button(
-            label=f"📄 鑑定書PDF（{label}）をダウンロード",
-            data=pdf_bytes,
-            file_name=f"uranai_{name.strip()}_{label}.pdf",
-            mime="application/pdf",
-            use_container_width=True,
-        )
+                    col_a, col_b = st.columns(2)
+                    with col_a:
+                        st.markdown(f"**ライフパスナンバー：{lp}**")
+                        st.caption(r['title'])
+                        if nums.get('dn'):
+                            st.markdown(f"ディスティニーナンバー：**{nums['dn']}**")
+                        if nums.get('sn'):
+                            st.markdown(f"ソウルナンバー：**{nums['sn']}**")
+                        if nums.get('pn'):
+                            st.markdown(f"パーソナリティーナンバー：**{nums['pn']}**")
+                    with col_b:
+                        st.markdown(f"バースデーナンバー：**{nums['bn']}**")
+                        st.markdown(f"パーソナルイヤー2026：**{nums['py']}**")
+                        if nums.get('mn'):
+                            st.markdown(f"マチュリティーナンバー：**{nums['mn']}**")
+                    label = "本格版"
+
+            st.divider()
+            st.download_button(
+                label=f"📄 鑑定書PDF（{label}）をダウンロード",
+                data=pdf_bytes,
+                file_name=f"uranai_{name.strip()}_{label}.pdf",
+                mime="application/pdf",
+                use_container_width=True,
+            )
+
+# ─── タブ2: 相性診断 ───────────────────────────────────────
+with tab2:
+    st.subheader("2人の相性を数秘術で診断します")
+    st.caption("お二人の名前と生年月日を入力してください。")
+
+    with st.form("compat_form"):
+        st.markdown("**Aさん（あなた）**")
+        ca1, ca2 = st.columns(2)
+        with ca1:
+            name_a = st.text_input("Aさんのお名前", placeholder="例：山田 花子", key="na")
+        with ca2:
+            st.write("")
+        cac1, cac2, cac3 = st.columns(3)
+        with cac1:
+            year_a  = st.number_input("生まれた年", min_value=1920, max_value=2010, value=1990, step=1, key="ya")
+        with cac2:
+            month_a = st.number_input("月", min_value=1, max_value=12, value=1, step=1, key="ma")
+        with cac3:
+            day_a   = st.number_input("日", min_value=1, max_value=31, value=1, step=1, key="da")
+
+        st.markdown("---")
+        st.markdown("**Bさん（相手）**")
+        cb1, cb2 = st.columns(2)
+        with cb1:
+            name_b = st.text_input("Bさんのお名前", placeholder="例：鈴木 太郎", key="nb")
+        with cb2:
+            st.write("")
+        cbc1, cbc2, cbc3 = st.columns(3)
+        with cbc1:
+            year_b  = st.number_input("生まれた年", min_value=1920, max_value=2010, value=1990, step=1, key="yb")
+        with cbc2:
+            month_b = st.number_input("月", min_value=1, max_value=12, value=1, step=1, key="mb")
+        with cbc3:
+            day_b   = st.number_input("日", min_value=1, max_value=31, value=1, step=1, key="db")
+
+        compat_submitted = st.form_submit_button("💑 相性診断する", use_container_width=True)
+
+    if compat_submitted:
+        if not name_a.strip() or not name_b.strip():
+            st.error("お二人のお名前を入力してください。")
+        elif not setup_fonts():
+            st.error("フォントの読み込みに失敗しました。")
+        else:
+            with st.spinner("診断中..."):
+                pdf_bytes_c, lp_a, lp_b, overall = gen_compat_pdf(
+                    name_a.strip(), int(year_a), int(month_a), int(day_a),
+                    name_b.strip(), int(year_b), int(month_b), int(day_b),
+                )
+                love, friend, work, _ = get_compat(lp_a, lp_b)
+
+            st.success("診断完了！")
+            st.markdown(f"### 総合相性スコア：**{overall}%**　{compat_label(overall)}")
+
+            st.markdown(f"**{name_a.strip()} さん**　ライフパス：{lp_a}")
+            st.markdown(f"**{name_b.strip()} さん**　ライフパス：{lp_b}")
+            st.divider()
+
+            st.markdown("#### スコア詳細")
+            st.markdown(f"恋愛相性　{love}%　{compat_label(love)}")
+            st.progress(love / 100)
+            st.markdown(f"友人相性　{friend}%　{compat_label(friend)}")
+            st.progress(friend / 100)
+            st.markdown(f"仕事相性　{work}%　{compat_label(work)}")
+            st.progress(work / 100)
+
+            st.divider()
+            st.download_button(
+                label="📄 相性鑑定書PDFをダウンロード",
+                data=pdf_bytes_c,
+                file_name=f"compat_{name_a.strip()}_{name_b.strip()}.pdf",
+                mime="application/pdf",
+                use_container_width=True,
+            )
+
+# ─── タブ3: 月別運勢 ───────────────────────────────────────
+with tab3:
+    st.subheader("2026年 あなたの月別運勢")
+    st.caption("名前と生年月日を入力すると、12ヶ月の詳細な運勢をお伝えします。")
+
+    with st.form("monthly_form"):
+        name_m = st.text_input("お名前（表示用）", placeholder="例：山田 花子", key="nm")
+        cm1, cm2, cm3 = st.columns(3)
+        with cm1:
+            year_m  = st.number_input("生まれた年", min_value=1920, max_value=2010, value=1990, step=1, key="ym")
+        with cm2:
+            month_m = st.number_input("月", min_value=1, max_value=12, value=1, step=1, key="mm")
+        with cm3:
+            day_m   = st.number_input("日", min_value=1, max_value=31, value=1, step=1, key="dm")
+
+        monthly_submitted = st.form_submit_button("📅 月別運勢を見る", use_container_width=True)
+
+    if monthly_submitted:
+        if not name_m.strip():
+            st.error("お名前を入力してください。")
+        elif not setup_fonts():
+            st.error("フォントの読み込みに失敗しました。")
+        else:
+            with st.spinner("運勢を計算中..."):
+                pdf_bytes_m, py_val = gen_monthly_pdf(
+                    name_m.strip(), int(year_m), int(month_m), int(day_m))
+                fc = get_monthly_forecast(py_val)
+
+            st.success(f"2026年のパーソナルイヤーナンバー：**{py_val}**")
+            st.divider()
+
+            MONTH_JA = ["1月","2月","3月","4月","5月","6月",
+                        "7月","8月","9月","10月","11月","12月"]
+
+            for mf in fc:
+                with st.expander(
+                    f"{MONTH_JA[mf['month']-1]}　個人月：{mf['personal_month']}　｜　{mf.get('theme','')}",
+                    expanded=(mf['month'] == 1)
+                ):
+                    st.markdown(f"**全体運**　{mf.get('overall','')}")
+                    st.markdown(f"**恋愛運**　{mf.get('love','')}")
+                    st.markdown(f"**仕事運**　{mf.get('work','')}")
+                    st.markdown(f"**健康運**　{mf.get('health','')}")
+                    st.info(f"アドバイス：{mf.get('advice','')}")
+                    st.caption(mf.get('lucky',''))
+
+            st.divider()
+            st.download_button(
+                label="📄 月別運勢PDFをダウンロード",
+                data=pdf_bytes_m,
+                file_name=f"monthly_{name_m.strip()}_2026.pdf",
+                mime="application/pdf",
+                use_container_width=True,
+            )
